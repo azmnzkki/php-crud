@@ -3,13 +3,10 @@
 require 'koneksi.php';
 
 if (isset($_POST["submit"])) {
-    insertDataGuests($_POST);
+    InsertDataTable($_POST, "reservations");
 }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,12 +41,12 @@ if (isset($_POST["submit"])) {
             <input type="text" name="nomor_kamar" placeholder="Nomor Kamar" id="nomor_kamar" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div>
         <div class="mb-5">
-            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal Check In</label>
-            <input type="text" name="tanggal_check_in" placeholder="Masukan Tanggal" id="tanggal_check_in" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal Reservasi</label>
+            <input type="text" name="tanggal_reservasi" placeholder="Masukan Tanggal" id="tanggal_reservasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div>
         <div class="mb-5">
-            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal Check Out</label>
-            <input type="text" name="tanggal_check_out" placeholder="Masukan Tanggal" id="tanggal_check_out" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+            <input type="text" name="status" placeholder="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div>
         <button type="submit" name="submit" class="text-white bg-blue-700 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 transition-all ease-in-out duration-500 dark:focus:ring-blue-800">GAASS!</button>
     </form>

@@ -3,11 +3,11 @@
 require 'koneksi.php';
 
 $id = $_GET["id"];
-$kamar = showDataKamar($id);
+$kamar = showTable($id, "kamar");
 
 if (isset($_POST["submit"])) {
     $data = $_POST;
-    if (edit($data, $id) > 0) {
+    if (editTable($data, $id, "kamar") > 0) {
         echo
         "<script>
         alert ('changed Succes!');

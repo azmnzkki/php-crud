@@ -4,7 +4,7 @@ require 'koneksi.php';
 
 $id = $_GET["id"];
 
-if (deleteReservations($id) > 0) {
+if (deleteTable($id, "reservations") > 0) {
     echo
     "<script>
     alert ('data berhasi di hapus')

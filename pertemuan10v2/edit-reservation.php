@@ -3,12 +3,12 @@
 require 'koneksi.php';
 
 $id = $_GET["id"];
-$reservations = showDataReservations($id);
+$reservations = showTable($id, "reservations");
 
 
 if (isset($_POST["submit"])) {
     $data = $_POST;
-    if (edit($data, $id) > 0) {
+    if (editTable($data, $id, "reservations") > 0) {
         echo
         "<script>
         alert ('changed succes')

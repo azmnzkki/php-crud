@@ -3,7 +3,7 @@
 require 'koneksi.php';
 
 if (isset($_POST["submit"])) {
-    InsertDataKamar($_POST);
+    InsertDataTable($_POST, "kamar");
     // var_dump($_POST);
 }
 
